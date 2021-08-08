@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Login {
+  access_token: String!
+}
+
+type Currency {
+  code: String!
+  name: String!
+  symbol: String!
+  exchangeRate: Float
+}
+
+type Country {
+  id: String!
+  name: String!
+  population: String!
+  currencies: [Currency!]!
+}
+
+type Query {
+  login: Login!
+  country(name: String!): Country!
+}
